@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repo Arama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Repo Arama</h1>
+
+        <input type="text" id="search" placeholder="Repo ara..." onkeyup="filterRepos()">
+
+        <select id="languageFilter" onchange="filterRepos()">
+            <option value="">Tüm Diller</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="Go">Go</option>
+        </select>
+
+        <select id="sortOrder" onchange="sortRepos()">
+            <option value="stars">Yıldız Sayısına Göre</option>
+            <option value="forks">Fork Sayısına Göre</option>
+        </select>
+
+        <ul id="repoList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
